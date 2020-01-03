@@ -30,13 +30,11 @@ Run a new container <br>
 
 Start Docker <br>
 `sudo docker start`  <br>
-or  <br>
 `sudo docker start -it ubuntu`
 
 Stop Docker <br>
-`sudo docker stop`
- <br> or  <br> 
- `sudo docker stop <contaier-id>`
+`sudo docker stop` <br>
+`sudo docker stop <contaier-id>`
 
 Information about memory, CPU, DISK, ....  <br>
 `sudo docker stats`
