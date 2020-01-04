@@ -54,3 +54,27 @@ Publish ypour local website in docker
 or
 
 `sudo docker run --name JeanServer2 -P -d -v ~/Desktop/HTML:/usr/share/nginx/html nginx`
+
+
+### Mysql
+`sudo docker pull mysql`
+
+`sudo docker run --name db -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql`
+
+`sudo docker exec -it db /bin/bash`
+
+`mysql -uroot -p123456;`
+
+`show databases;`
+
+`create database test;`
+
+`use test;`
+
+`create table users (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, name TEXT);`
+
+`show tables;`
+
+`insert into users (name) values ('Jean');`
+
+`select * from users;`
