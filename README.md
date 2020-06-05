@@ -83,49 +83,53 @@ or
 
 node hello application
 
-> const http = require('http');
+`const http = require('http');`
 
-> const port = 80;
+`const port = 80;`
 
-> const server = http.createServer((req, res) => {
+`const server = http.createServer((req, res) => {`
 
->  res.statusCode = 200;
+` res.statusCode = 200;`
 
->  res.setHeader('Content-Type', 'text/plain');
+` res.setHeader('Content-Type', 'text/plain');`
 
->  res.end('Hello World');
+` res.end('Hello World');`
 
-> });
+` });`
 
-> server.listen(port, () => {
+`server.listen(port, () => {`
 
->   console.log(`Server running at http://localhost:${port}/`);
+`  console.log('Server running at http://localhost:${port}/');`
 
-> });
+` });`
 
 <br>
 
 <b>DOCKERFILE</b>
 
-> FROM node:10
-> WORKDIR /usr/src/app
-> COPY ./ .
-> EXPOSE 80
-> CMD [ "node","app.js" ]
+` FROM node:10`
+
+` WORKDIR /usr/src/app`
+
+` COPY ./ .`
+
+` EXPOSE 80`
+
+` CMD [ "node","app.js" ]`
+
 
 docker cmd
 
-> docker build -t teste_node_image
+` docker build -t teste_node_image`
 
-> docker run -p 3000:80 -it teste_node_image
+` docker run -p 3000:80 -it teste_node_image`
 
 <b>To Test</b>
 
 in CMD
 
-> curl -i localhost:3000
+` curl -i localhost:3000`
 
-> 
 
 
 
