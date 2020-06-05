@@ -78,3 +78,54 @@ or
 `insert into users (name) values ('Jean');`
 
 `select * from users;`
+
+### Node - Hello World
+
+node hello application
+
+> const http = require('http');
+
+> const port = 80;
+
+> const server = http.createServer((req, res) => {
+
+>  res.statusCode = 200;
+
+>  res.setHeader('Content-Type', 'text/plain');
+
+>  res.end('Hello World');
+
+> });
+
+> server.listen(port, () => {
+
+>   console.log(`Server running at http://localhost:${port}/`);
+
+> });
+
+<br>
+
+<b>DOCKERFILE</b>
+
+> FROM node:10
+> WORKDIR /usr/src/app
+> COPY ./ .
+> EXPOSE 80
+> CMD [ "node","app.js" ]
+
+docker cmd
+
+> docker build -t teste_node_image
+
+> docker run -p 3000:80 -it teste_node_image
+
+<b>To Test</b>
+
+in CMD
+
+> curl -i localhost:3000
+
+> 
+
+
+
